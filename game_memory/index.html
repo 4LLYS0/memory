@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="fundoDesfocado" class="oculto"></div>
+    <!-- Cabeçalho com título e seleção de dificuldade -->
+    <header>
+        <h1>Jogo da Memória</h1>
+        <div id="menu">
+            <button id="soloBtn">Modo Solo</button>
+            <button id="duoBtn">Modo Dupla</button>
+            <div id="dificuldade">
+                <label for="nivel">Nível de Dificuldade:</label>
+                <select id="nivel">
+                    <option value="facil">Fácil</option>
+                    <option value="medio">Médio</option>
+                    <option value="dificil">Difícil</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sessão principal com o tabuleiro do jogo e status -->
+    <main>
+        <section id="gameArea">
+            <div id="gameBoard"></div>
+            <div id="status">
+                <p id="contadorErros">Erros: 0</p>
+                <p id="temporizador">Tempo: 00:00</p>
+            </div>
+        </section>
+        <div id="mensagemFinal"></div>
+
+        <!-- Mensagem de parabéns que aparece ao acertar todas as cartas -->
+        <div id="mensagemParabens" >
+        </div>
+        
+    </main>
+
+    <!-- Rodapé com histórico de jogadas -->
+    <footer>
+        <h3>Histórico de Jogadas</h3>
+        <table id="historicoJogos">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Tempo</th>
+                    <th>Nível</th>
+                    <th>Erros</th>
+                </tr>
+            </thead>
+            <tbody id="historicoCorpo"></tbody>
+            <div id="placarDupla" style="margin: 20px auto;">
+                <h2>Pontuação dos Jogadores</h2>
+                <table id="tabelaPontuacao">
+                    <thead>
+                        <tr>
+                            <th>Jogador</th>
+                            <th>Pontuação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jogador 1</td>
+                            <td id="pontuacaoJogador1">0</td>
+                        </tr>
+                        <tr>
+                            <td>Jogador 2</td>
+                            <td id="pontuacaoJogador2">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </table>
+    </footer>
+
+    <!-- Inclusão do script -->
+    <script src="script.js"></script>
+</body>
+</html>
